@@ -1,0 +1,29 @@
+package org.crazyit.act.c26_drools;
+
+rule "discount 7"
+    when
+        Member(identity == "gold");
+    then
+        System.out.println("黄金圣斗士打7折");
+end
+
+rule "discount 8"
+    when
+        Member(identity == "silver");
+    then
+        System.out.println("白银圣斗士打8折");
+end
+
+rule "discount 9"
+    when
+        Member(identity == "copper");
+    then
+        System.out.println("青铜圣斗士打9折");
+end
+
+rule "discount 10"
+    when
+        Member(identity == "diaosi");
+    then
+        System.out.println("屌丝打骨折");
+end

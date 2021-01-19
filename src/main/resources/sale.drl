@@ -1,0 +1,17 @@
+package org.crazyit.act.c28_activitiDrools;
+
+rule "gold"
+    when
+        $m : Member(identity == "gold")
+    then
+        $m.setDiscount(0.7);
+        update($m);
+end
+
+rule "silver"
+    when
+        $m : Member(identity == "silver")
+    then
+        $m.setDiscount(0.8);
+        update($m);
+end
