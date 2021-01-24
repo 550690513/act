@@ -11,7 +11,7 @@ import org.activiti.engine.task.Task;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class EnvTest {
+public class T01_EnvTest {
 
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext(new String[]{"spring.activiti.cfg.xml"});

@@ -4,10 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 配置数据源 -->
-    <bean id="dataSource"
-        class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-        <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/act" />
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/act?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;nullCatalogMeansCurrent=true" />
         <property name="username" value="root" />
         <property name="password" value="123456" />
     </bean>
@@ -46,9 +45,10 @@
     <bean id="historyService" factory-bean="processEngine" factory-method="getHistoryService" />
     <bean id="managementService" factory-bean="processEngine"  factory-method="getManagementService" />
 
-    <bean id="myService" class="org.crazyit.act.c10.MyService"/>
+    <!-- 自定义bean -->
+    <bean id="myService" class="org.crazyit.act.c32_activitiSpring.MyService"/>
 
-    <bean id="serviceB" class="org.crazyit.act.c10.ServiceB">
+    <bean id="serviceB" class="org.crazyit.act.c32_activitiSpring.ServiceB">
         <property name="taskService" ref="taskService" />
     </bean>
 </beans>

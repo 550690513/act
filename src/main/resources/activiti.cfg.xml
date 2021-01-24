@@ -12,7 +12,8 @@
 		<property name="jdbcPassword" value="123456" />
 
 		<!-- 【false、true、create-drop、drop-create】 -->
-		<property name="databaseSchemaUpdate" value="true" />
+		<!--<property name="databaseSchemaUpdate" value="true" />-->
+		<property name="databaseSchemaUpdate" value="drop-create" />
 
 		<!-- 配置历史保存级别 【none、activity、audit（默认）、full】-->
 		<property name="history" value="full"/>

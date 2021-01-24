@@ -1,4 +1,4 @@
-package org.crazyit.act;
+package org.crazyit.act.c37_activitiAdminCxf;
 
 import java.io.InputStream;
 
